@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Thank you for adding the movie " + Model.title + ".";
+}
+@model MovieCollection.Models.EnterMovie
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <p>
+        @if (Model.title == "Independence Day")
+        {
+            @:Actually we cannot display that movie becaue it is not the most american movie ever made.
+        }
+        else
+        {
+            @: Great! That movie should be added to the list. You may check the link below to see if it has been succesfully added.
+        }
+
+
+
+    </p>
+    <a class="text-center" href="list">Click here</a>
+</div>
